@@ -1,8 +1,8 @@
 import mongoose, { Schema } from "mongoose"
 
 const projectAssignmentsSchema = new Schema({
-  employee: { Number, ref: 'employees'},
-  project: { String, ref: 'projects'},
+  employee: { type: mongoose.Schema.Types.ObjectId, ref: 'employees'},
+  project: { type: mongoose.Schema.Types.ObjectId, ref: 'projects'},
   start_date: Date
 }) 
 
