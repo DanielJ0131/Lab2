@@ -28,9 +28,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      'no-console': 'off',
-      semi: ['error', 'never'],
-      indent: ['error', 2]
+
     },
   },
 ]
