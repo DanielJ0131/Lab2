@@ -24,13 +24,22 @@ app.use(cors({
 app.disable('x-powered-by')
 
 // Use the public folder for static resources
-app.use(express.static('public'))
+app.use(express.static('../../client/dist'))
 
 // Middleware to parse JSON data as part of the body
 app.use(express.json())
 
 // Mount the routes
 app.use('/', router)
+
+// Redirect to index.html for unknown routes
+app.use((req, res, next) => {
+  res.sendFile('index.html', { root: './client/dist' }, (err) => {
+    if (err) {
+      next(err)
+    }
+  })
+})
 
 // Middleware for 404
 app.use(errorHandler.notFoundDefault)

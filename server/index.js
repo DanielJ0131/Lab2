@@ -4,7 +4,7 @@ import databaseService from './src/service/DatabaseService.js'
 // Connect to the database
 await databaseService.connect()
 
-// TO CREATE SAMPLE DATA
+// Delete and Create Sample Data
 await databaseService.createSampleData()
 
 // Start the express server

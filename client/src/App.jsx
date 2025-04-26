@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectAssignmentsTable from './components/ProjectAssignmentsTable'
+import ProjectAssignmentsTable from './components/ProjectAssignmentsTable.jsx'
 
 function App() {
   return (
