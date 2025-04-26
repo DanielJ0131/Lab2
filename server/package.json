@@ -1,0 +1,33 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Fullstack - Lab 2 React",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env index",
+    "dev": "npx nodemon --env-file=.env index",
+    "clean": "rm -rf node_modules/ package-lock.json",
+    "eslint": "npx eslint .",
+    "eslint:fix": "npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJ0131/Lab2.git"
+  },
+  "keywords": [],
+  "author": "Daniel Jönsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielJ0131/Lab2/issues"
+  },
+  "homepage": "https://github.com/DanielJ0131/Lab2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "eslint": "^9.24.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.13.2",
+    "morgan": "^1.10.0"
+  }
+}
