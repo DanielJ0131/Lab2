@@ -4,9 +4,7 @@ import ProjectAssignmentsTable from './components/ProjectAssignmentsTable'
 function App() {
   return (
     <div>
-      <header>
-        <h1>Lab 2 Full Stack</h1>
-      </header>
+
       <ProjectAssignmentsTable />
       <footer>
         <p>© Daniel Jönsson</p>
