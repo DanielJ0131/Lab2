@@ -25,10 +25,10 @@ class ProjectsModel{
      * @param {Object} projectData - The data of the project to add.
      * @returns {Promise<Object>} A promise that resolves to the newly created project object.
      */
-    async addProject(projectData) {
-      try {
-        const newProject = await databaseService.collections[1].create(projectData)
-        return newProject
+  async addProject(projectData) {
+    try {
+      const newProject = await databaseService.collections[1].create(projectData)
+      return newProject
     } catch (error) {
       console.log(error)
     }

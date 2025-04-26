@@ -26,9 +26,9 @@ class EmployeesModel{
      * @returns {Promise<Object>} A promise that resolves to the newly created employee object.
      */
   async addEmployee(employeeData) {
-      try {
-        const newEmployee = await databaseService.collections[0].create(employeeData)
-        return newEmployee
+    try {
+      const newEmployee = await databaseService.collections[0].create(employeeData)
+      return newEmployee
     } catch (error) {
       console.log(error)
     }

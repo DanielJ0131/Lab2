@@ -27,8 +27,8 @@ class ProjectAssignmentsModel{
    */
   async addProjectAssignment(projectAssignmentData) {
     try {
-        const newProjectAssignment = await databaseService.collections[2].create(projectAssignmentData)
-        return newProjectAssignment
+      const newProjectAssignment = await databaseService.collections[2].create(projectAssignmentData)
+      return newProjectAssignment
     } catch (error) {
       console.log(error)
     }
@@ -42,9 +42,9 @@ class ProjectAssignmentsModel{
   async getProjectAssignments() {
     try {
       const projectAssignments = await databaseService.collections[2]
-          .find() 
-          .populate('employee')
-          .populate('project')
+        .find() 
+        .populate('employee')
+        .populate('project')
       return projectAssignments
     } catch (error) {
       console.log(error)
