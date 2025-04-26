@@ -42,9 +42,9 @@ class ProjectAssignmentsModel{
   async getProjectAssignments() {
     try {
       const projectAssignments = await databaseService.collections[2]
-        .find() 
-        .populate('employee')
-        .populate('project')
+          .find() 
+          .populate('employee')
+          .populate('project')
       return projectAssignments
     } catch (error) {
       console.log(error)

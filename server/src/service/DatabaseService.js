@@ -15,20 +15,20 @@ class DatabaseService {
   collections = []
 
   async connect() {
-    console.log('Trying to Connect to Database...')
-    try {
-      this.#db = await mongoose.connect(config.url)
+      console.log('Trying to Connect to Database...')
+      try {
+        this.#db = await mongoose.connect(config.url)
 
-      if (!this.#db) {
-        console.error('Failed to connect to the database.')
-        return
+        if (!this.#db) {
+          console.error('Failed to connect to the database.')
+          return
+        }
+        this.collections = [Employee, Project, ProjectAssignment]
+        console.log('Connection Successful!')
+      } catch (error) {
+        console.log('Error with connection: ' + error)
       }
-      this.collections = [Employee, Project, ProjectAssignment]
-      console.log('Connection Successful!')
-    } catch (error) {
-      console.log('Error with connection: ' + error)
     }
-  }
 
   async closeConnection() {
     if (this.#db) {
