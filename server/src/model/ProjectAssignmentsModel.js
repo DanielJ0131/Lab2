@@ -27,8 +27,8 @@ class ProjectAssignmentsModel{
    */
   async addProjectAssignment(projectAssignmentData) {
     try {
-      const newProjectAssignment = await databaseService.collections[2].create(projectAssignmentData)
-      return newProjectAssignment
+        const newProjectAssignment = await databaseService.collections[2].create(projectAssignmentData)
+        return newProjectAssignment
     } catch (error) {
       console.log(error)
     }

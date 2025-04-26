@@ -11,19 +11,19 @@ class ProjectAssignmentsController {
      * @param {Request} req - The request object.
      * @param {Response} res - The response object.
      */
-  async addProjectAssignment(req, res, next) {
-    try {
-      const newProjectAssignment = req.body
-      const createdProjectAssignment = await projectAssignmentsModel.addProjectAssignment(newProjectAssignment)
-    
-      if (!createdProjectAssignment) {
-        return res.status(400).json({ message: 'Failed to create project assignment' })
-      }
+    async addProjectAssignment(req, res, next) {
+      try {
+        const newProjectAssignment = req.body
+        const createdProjectAssignment = await projectAssignmentsModel.addProjectAssignment(newProjectAssignment)
+      
+          if (!createdProjectAssignment) {
+            return res.status(400).json({ message: 'Failed to create project assignment' })
+          }
 
-      res.status(201).json(createdProjectAssignment)
-    } catch (error) {
-      next(error)
-    }
+        res.status(201).json(createdProjectAssignment)
+      } catch (error) {
+        next(error)
+      }
   }
 
   async getProjectAssignments(req, res, next) {
