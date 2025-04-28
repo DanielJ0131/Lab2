@@ -99,7 +99,7 @@ const ProjectAssignmentsTable = () => {
 
       if (!assignmentRes.ok) throw new Error('Failed to assign project');
 
-      alert('Assigned a Project for you, new Employee!');
+      alert('Assigned a new project for you ' + newEmployee.full_name);
       fetchAssignments(); // Refresh the table after adding
       setNewEmployee({ full_name: "", email: "", password: "" }); // Clear the form
     } catch (error) {
